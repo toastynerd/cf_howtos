@@ -4,3 +4,5 @@
             howto_path(@howto),
             :method => :delete,
             :confirm => "Are you sure you want to delete this howto?" %>
+
+<%= link_to "New Step", new_howto_step_path(@howto) %>

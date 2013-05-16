@@ -1,6 +1,6 @@
-class Howto < ActiveRecord::Base
+class Step < ActiveRecord::Base
+  belongs_to :howto
   attr_accessible :description, :title
-  has_many :steps
 
   validates :title, :presence => true
   validates :description, :presence => true
