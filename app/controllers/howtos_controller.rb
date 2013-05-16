@@ -37,6 +37,11 @@ class HowtosController < ApplicationController
     end
   end
 
+  def destroy
+    @howto.destroy
+    flash[:notice] = "Howto has been deleted."
+    redirect_to howtos_path
+  end
 private
 
   def find_howto
