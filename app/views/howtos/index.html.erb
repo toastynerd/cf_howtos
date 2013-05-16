@@ -1,0 +1,11 @@
+<div class="column large-8 large-centered">
+  <div class="panel">
+  <h2>Howtos</h2>
+  <ui>
+    <% @howtos.each do |howto| %>
+      <li><%= link_to howto.title, howto %></li>
+    <% end %>
+  </ul>
+  </div>
+  <%= link_to "New Howto", new_howto_path, :class => "button expand large-6" %>
+</div>

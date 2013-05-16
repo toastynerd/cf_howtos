@@ -1,0 +1,12 @@
+<%= form_for(@howto) do |f| %>
+  <%= f.error_messages %>
+  <div class="panel">
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </div>
+  <div class="panel">
+    <%= f.label :description %><br/>
+    <%= f.text_field :description %>
+  </div>
+  <%= f.submit :class => "button" %>
+<% end %>
