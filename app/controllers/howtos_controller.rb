@@ -23,6 +23,20 @@ class HowtosController < ApplicationController
     #
   end
 
+  def edit
+    #
+  end
+
+  def update
+    if @howto.update_attributes(params[:howto])
+      flash[:notice] = "Howto has been updated."
+      redirect_to @howto
+    else
+      flash[:alert] = "Howto was not updated."
+      render :action => "edit"
+    end
+  end
+
 private
 
   def find_howto
