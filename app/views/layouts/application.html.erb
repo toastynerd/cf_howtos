@@ -22,14 +22,16 @@
 
   <body>
     <div class="row">
-    <%= unless flash.each do |key, value| %>
-      <div class="flash panel" id="<%= key %>">
-          <%= value %>
-      </div>
-    <% end %>
-    <% end %>
+      <div class="column large-8 large-centered">
+        <%= unless flash.each do |key, value| %>
+          <div class="flash panel" id="<%= key %>">
+              <%= value %>
+          </div>
+        <% end %>
+        <% end %>
 
     <%= yield %>
+      </div>
     </div>
 
     <%= javascript_include_tag "application" %>
