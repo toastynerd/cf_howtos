@@ -1,4 +1,5 @@
-<div class="step panel">
+<div class="step panel" id="step">
   <h2><%= @step.title %></h2>
   <%= simple_format(@step.description) %>
+  <%= link_to "Edit Step", [:edit, @howto, @step], :class => "button" %>
 </div>
