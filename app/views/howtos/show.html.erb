@@ -7,10 +7,10 @@
 
 <%= link_to "New Step", new_howto_step_path(@howto), :class => "button" %>
 <ul class="panel" id="steps">
-  <%= @howto.steps.each do |step| %>
+  <% @howto.steps.each do |step| %>
   <li>
-    #<%= step.id %>
-    <%= link_to step.title, [@howto, @title] %>
+    <%= step.id %> -
+    <%= link_to step.title, [@howto, step] %>
   </li>
   <% end %>
 </ul>
