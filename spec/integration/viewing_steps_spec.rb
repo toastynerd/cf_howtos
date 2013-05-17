@@ -22,7 +22,7 @@ feature "viewing tickets" do
     page.should_not have_content("make another one")
 
     click_link "get some bread"
-    within("#steps li") do
+    within("#step") do
       page.should have_content("get some bread")
     end
     page.should have_content("make sure it's good bread.")

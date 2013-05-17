@@ -35,6 +35,12 @@ class StepsController < ApplicationController
     end
   end
 
+  def destroy
+    @step.destroy
+    flash[:notice] = "Step has been deleted."
+    redirect_to @howto
+  end
+
 
 private
   def find_howto
